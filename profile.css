@@ -1,0 +1,105 @@
+
+body{
+	background: palevioletred;
+	font-size: 12pt;
+	font-family: verdana, sans-serif;
+	color: maroon;
+}
+
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/*MAIN LAYOUT*/
+
+.allContent{
+	padding: 2rem;
+	width: 769px;
+	margin: auto;
+	background: mistyrose;
+}
+
+.introBox{
+	overflow: auto;
+}
+
+.mainBox{
+	overflow: auto;
+}
+
+/*.mainGallery{
+	float: right;
+}*/
+
+
+
+
+/*UNIVERSAL CLASSES*/
+
+.imageBox{
+
+}
+
+.image{
+	border-radius: 50%;
+}
+
+.heading{
+
+}
+
+
+
+
+/*INTRO BOX LAYOUT*/
+
+.introImageBox{
+	float: left;
+}
+
+.introImage{
+	width: 12rem;
+	height: 12rem;
+}
+
+.introHeading{
+
+}
+
+.introText{
+	padding-left: 1rem;
+
+}
+
+
+
+
+
+/*MAIN BOX LAYOUT*/
+
+.mainHeading{
+}
+
+.mainParagraph{
+
+}
+
+.imageGallery{
+	float: right;
+}
+
+.mainImageFrame{
+	line-height: 1.4rem;
+	text-align: center;
+	padding: 1rem;
+	font-size: 0.9rem;
+	width: 278px;
+}
+
+.mainImage{
+	width: 15rem;
+	height: 15rem;
+	padding-bottom: 0.5rem;
+}
