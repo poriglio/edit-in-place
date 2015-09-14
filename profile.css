@@ -1,53 +1,47 @@
 
 body{
-	background: palevioletred;
+	background-color: palevioletred;
 	font-size: 12pt;
 	font-family: verdana, sans-serif;
-	color: maroon;
+	color: #640A42;
 }
 
 *{
 	margin: 0px;
 	padding: 0px;
 	box-sizing: border-box;
+	position: relative;
 }
 
 /*MAIN LAYOUT*/
 
 .allContent{
-	padding: 2rem;
 	width: 769px;
 	margin: auto;
-	background: mistyrose;
 }
 
-.introBox{
+.contentBox{
+	background-image: linear-gradient(
+		to right, mistyrose, #C56584);
 	overflow: auto;
+	margin: 1.75rem;
+	padding: 1.25rem;
+	border-radius: 5px;
 }
 
-.mainBox{
-	overflow: auto;
-}
-
-/*.mainGallery{
-	float: right;
-}*/
 
 
 
 
 /*UNIVERSAL CLASSES*/
 
-.imageBox{
-
-}
-
 .image{
 	border-radius: 50%;
 }
 
 .heading{
-
+	line-height: 3rem;
+	padding-left: 1.5rem;
 }
 
 
@@ -55,42 +49,50 @@ body{
 
 /*INTRO BOX LAYOUT*/
 
-.introImageBox{
-	float: left;
+.introBox{
+	line-height: 9rem;
 }
 
 .introImage{
-	width: 12rem;
-	height: 12rem;
-}
-
-.introHeading{
-
+	float: left;
+	width: 10rem;
+	height: 10rem;
+	box-shadow: -1px 0px 14px -1px #640A42;
 }
 
 .introText{
-	padding-left: 1rem;
-
+	display: inline-block;
+	padding-left: 1.5rem;
+	vertical-align: middle;
 }
 
+.introText>p{
+	line-height: 1.5rem;
+	padding-left: 3rem;
+}
 
 
 
 
 /*MAIN BOX LAYOUT*/
 
-.mainHeading{
+.mainBox{
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
 .mainParagraph{
-
+	padding-left: 1.5rem;
+	line-height: 1.5rem;
+	margin-top: 1rem;
 }
 
 .imageGallery{
 	float: right;
+	padding-left: 1rem;
 }
 
-.mainImageFrame{
+.imageFrame{
 	line-height: 1.4rem;
 	text-align: center;
 	padding: 1rem;
@@ -98,8 +100,30 @@ body{
 	width: 278px;
 }
 
-.mainImage{
+.galleryImage{
 	width: 15rem;
 	height: 15rem;
-	padding-bottom: 0.5rem;
+	box-shadow: -2px 1px 19px 1px #640A42;
+}
+
+
+
+/*HIDDEN INPUT BOXES*/
+
+.input{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	background-color: palevioletred;
+	color: mistyrose;
+	font-size: 1rem;
+	vertical-align: text-top;
+}
+
+.paragraphInput{
+	width: 375px;
+}
+
+.headingInput{
+	width: 625px;
 }

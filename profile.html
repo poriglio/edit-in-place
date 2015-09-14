@@ -1,54 +1,82 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="formModule">
 	<head>
 		<title>User Profile</title>
 		<meta charset="utf-8">
 		<link href="profile.css" rel="stylesheet" type="text/css">
-		<!-- <script src="angular.js"></script> -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 	</head>
-	<body>
+	<body ng-controller="formController">
 		<div class="allContent">
-			<div class="introBox">
-				<div class="imageBox introImageBox">
-					<img class="image introImage" src="power.jpg">
-				</div>
+			<div class="contentBox introBox">
+				<img class="image introImage" src="power.jpg">
 				<div class="introText">
-					<h1 class="heading introHeading">Name</h1>
-					<p>Nickname</p>
-					<p>Location</p>
-					<p>Website</p>
+					<h1 ng-click="usernameClick()" ng-model="usernameInput" class="heading">
+						<input class="input" ng-show="usernameField">{{username}}
+						</input>
+					</h1>
+					<p ng-click="nicknameClick()" ng-model="nicknameInput">
+						<input class="input" ng-show="nicknameField">{{nickname}}</input>
+					</p>
+					<p ng-click="locationClick()" ng-model="locationInput">
+						<input class="input" ng-show="userLocationField">{{userLocation}}</input>
+					</p>
+					<p ng-click="websiteClick()" ng-model="websiteInput">
+						<input class="input" ng-show="websiteField">{{website}}</input>
+					</p>
 				</div>
 			</div>
 
-			<div class="mainBox">			
-				<h1 class="heading mainHeading">
-					Heading Goes Here
+			<div class="contentBox mainBox">			
+				<h1 ng-click="headingClick()" ng-model="headingInput" class="headingInput heading">
+					<input class="input" ng-show="introField">
+					{{intro}}
+					</input>
 				</h1>
 				<div class="imageGallery">
-					<div class="mainImageFrame">
-						<img src="ericdraug.jpg" class="image mainImage">
-						Draug watches television while her best friend, Eric, goofs off.
+					<div  ng-click="caption1Click()" ng-model="caption1Input"class="imageFrame">
+						<img src="ericdraug.jpg" class="image galleryImage">
+						<div>
+							<input class="input" ng-show="caption1Field">
+							{{caption1}}
+							</input>
+						</div>
 					</div>
-					<div class="mainImageFrame">
-						<img src="oregon.jpg" class="image mainImage">
-						Who knew Oregon looked like this? 
+					<div ng-click="caption2Click()" ng-model="caption2Input" class="imageFrame">
+						<img src="oregon.jpg" class="image galleryImage">
+						<div>
+							<input class="input" ng-show="caption2Field">
+							{{caption2}}
+							</input>
+						</div>
 					</div>
-					<div class="mainImageFrame">
-						<img src="tux.jpg" class="image mainImage">
-						Tux the cat, being cute.
+					<div ng-click="caption3Click()" ng-model="caption3Input"class="imageFrame">
+						<img src="tux.jpg" class="image galleryImage">
+						<div>
+							<input class="input" ng-show="caption3Field">
+							{{caption3}}
+							</input>
+						</div>
 					</div>	
 				</div>
-				<p class="mainParagraph">
-					Bacon ipsum dolor amet pork chop turducken prosciutto meatball pork belly. Venison chicken jowl, meatball salami cow frankfurter filet mignon flank tongue. Brisket biltong andouille chuck pork chop landjaeger. Shankle ground round doner pancetta. Kielbasa chicken cow frankfurter, drumstick doner fatback swine andouille landjaeger jowl pork pig. Flank pastrami tri-tip, shank turducken prosciutto picanha ribeye bresaola.
+				<p ng-click="paragraph1Click()" ng-model="paragraph1Input" class="mainParagraph">
+					<input class="input paragraphInput" ng-show="paragraph1Field">{{paragraph1}}
+					</input>
 				</p>
-				<p class="mainParagraph">
-					Filet mignon ribeye ham hock, landjaeger tail short ribs t-bone short loin chicken meatloaf pork loin biltong boudin pig venison. Ribeye ball tip shank rump pig spare ribs biltong landjaeger porchetta prosciutto kevin alcatra sausage. Rump sirloin doner, pastrami salami corned beef ribeye picanha shoulder drumstick pork belly. Capicola tenderloin shankle cow cupim, sirloin beef fatback alcatra brisket.
+				<p ng-click="paragraph2Click()" ng-model="paragraph2Input" class="mainParagraph">
+					<input class="input paragraphInput" ng-show="paragraph2Field">
+					{{paragraph2}}
+					</input>
 				</p>
-				<p class="mainParagraph">
-					Pig strip steak leberkas t-bone chuck. Salami corned beef turkey, tenderloin prosciutto shankle leberkas swine jowl pork loin capicola flank cow. Ham hock flank fatback sausage pig, hamburger chicken ground round chuck. Pork pancetta pastrami ribeye ground round meatloaf swine. Pork belly rump jowl pastrami tri-tip chicken. Chuck salami cupim beef pork.
+				<p ng-click="paragraph3Click()" ng-model="paragraph3Input" class="mainParagraph">
+					<input class="input paragraphInput" ng-show="paragraph3Field">
+					{{paragraph3}}
+					</input>
 				</p>
-				<p class="mainParagraph">
-					Bacon doner leberkas t-bone andouille meatloaf. Pancetta ribeye chicken tail, boudin andouille landjaeger turkey picanha capicola sausage. Capicola pork belly beef porchetta short ribs fatback. Ham kevin meatball doner cow tongue frankfurter. Ham chuck fatback ground round sirloin hamburger jerky. Tenderloin bresaola swine t-bone jerky turkey.
+				<p ng-click="paragraph4Click()" ng-model="paragraph4Input" class="mainParagraph">
+					<input class="input paragraphInput" ng-show="paragraph4Field">
+					{{paragraph4}}
+					</input>
 				</p>
 			</div>
 		</div>	
