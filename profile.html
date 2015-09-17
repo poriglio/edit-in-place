@@ -11,71 +11,71 @@
 			<div class="contentBox introBox">
 				<img class="image introImage" src="power.jpg">
 				<div class="introText">
-					<h1 ng-click="usernameClick()" ng-model="usernameInput" class="heading">
-						<input class="input" ng-show="usernameField">{{username}}
+					<h1 ng-click="showTextbox()" ng-model="profileInput" class="heading">
+						<input ng-blur="blur" class="input" ng-show="textboxVisible">{{userinfo.username}}
 						</input>
 					</h1>
-					<p ng-click="nicknameClick()" ng-model="nicknameInput">
-						<input class="input" ng-show="nicknameField">{{nickname}}</input>
+					<p ng-click="showTextbox()" ng-model="profileInput">
+						<input ng-blur="blur" class="input" ng-show="textboxVisible">{{userinfo.nickname}}</input>
 					</p>
-					<p ng-click="locationClick()" ng-model="locationInput">
-						<input class="input" ng-show="userLocationField">{{userLocation}}</input>
+					<p ng-click="showTextbox()" ng-model="profileInput">
+						<input ng-blur="blur" class="input" ng-show="textboxVisible">{{userinfo.location}}</input>
 					</p>
-					<p ng-click="websiteClick()" ng-model="websiteInput">
-						<input class="input" ng-show="websiteField">{{website}}</input>
+					<p ng-click="showTextbox()" ng-model="profileInput">
+						<input ng-blur="blur" class="input" ng-show="textboxVisible">{{userinfo.website}}</input>
 					</p>
 				</div>
 			</div>
 
 			<div class="contentBox mainBox">			
-				<h1 ng-click="headingClick()" ng-model="headingInput" class="headingInput heading">
-					<input class="input" ng-show="introField">
-					{{intro}}
+				<h1 ng-click="showTextbox()" ng-model="profileInput" class="headingInput heading">
+					<input ng-blur="blur" class="input" ng-show="textboxVisible">
+					{{userinfo.intro}}
 					</input>
 				</h1>
 				<div class="imageGallery">
-					<div  ng-click="caption1Click()" ng-model="caption1Input"class="imageFrame">
+					<div  ng-click="showTextbox()" ng-model="profileInput" class="imageFrame">
 						<img src="ericdraug.jpg" class="image galleryImage">
 						<div>
-							<input class="input" ng-show="caption1Field">
-							{{caption1}}
+							<input ng-blur="blur" class="input" ng-show="textboxVisible">
+							{{userinfo.caption1}}
 							</input>
 						</div>
 					</div>
-					<div ng-click="caption2Click()" ng-model="caption2Input" class="imageFrame">
+					<div ng-click="showTextbox()" ng-model="profileInput" class="imageFrame">
 						<img src="oregon.jpg" class="image galleryImage">
 						<div>
-							<input class="input" ng-show="caption2Field">
-							{{caption2}}
+							<input ng-blur="blur" class="input" ng-show="textboxVisible">
+							{{userinfo.caption2}}
 							</input>
 						</div>
 					</div>
-					<div ng-click="caption3Click()" ng-model="caption3Input"class="imageFrame">
+					<div ng-click="showTextbox()" ng-model="profileInput" class="imageFrame">
 						<img src="tux.jpg" class="image galleryImage">
 						<div>
-							<input class="input" ng-show="caption3Field">
-							{{caption3}}
+							<input ng-blur="blur" class="input" ng-show="textboxVisible">
+							{{userinfo.caption3}}
 							</input>
 						</div>
 					</div>	
 				</div>
-				<p ng-click="paragraph1Click()" ng-model="paragraph1Input" class="mainParagraph">
-					<input class="input paragraphInput" ng-show="paragraph1Field">{{paragraph1}}
+				<p ng-click="showTextbox()" ng-model="profileInput" class="mainParagraph">
+					<input ng-blur="blur" class="input paragraphInput" ng-show="textboxVisible">{{userinfo.bio1}}
 					</input>
 				</p>
-				<p ng-click="paragraph2Click()" ng-model="paragraph2Input" class="mainParagraph">
-					<input class="input paragraphInput" ng-show="paragraph2Field">
-					{{paragraph2}}
+				<p ng-click="showTextbox()" ng-model="profileInput" class="mainParagraph">
+					<input ng-blur="blur" class="input paragraphInput" ng-show="textboxVisible">
+					{{userinfo.bio2}}
 					</input>
 				</p>
-				<p ng-click="paragraph3Click()" ng-model="paragraph3Input" class="mainParagraph">
-					<input class="input paragraphInput" ng-show="paragraph3Field">
-					{{paragraph3}}
+				<p ng-click="showTextbox()" ng-model="profileInput" class="mainParagraph">
+					<input ng-blur="blur" class="input paragraphInput" ng-show="textboxVisible">
+					{{userinfo.bio3}}
 					</input>
 				</p>
-				<p ng-click="paragraph4Click()" ng-model="paragraph4Input" class="mainParagraph">
-					<input class="input paragraphInput" ng-show="paragraph4Field">
-					{{paragraph4}}
+				<p ng-click="showTextbox()" ng-model="profileInput" class="mainParagraph">
+					<input ng-blur="blur" class="input paragraphInput" ng-show="textboxVisible">
+					{{userinfo.bio4}}
 					</input>
 				</p>
 			</div>
