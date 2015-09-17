@@ -6,14 +6,10 @@
 			<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 		</head>
 		<body ng-controller="practiceController">
-			<h1 ng-click="clickText()">{{randomInfo.heading}}<h1>
-			<input placeholder="Name" ng-focus="focused()" ng-blur="blurred()" ng-show="boxVisibility" ng-model="randomInfo.heading" type="text"></input>
-			<p ng-click="clickText()">{{randomInfo.one}}</p>
-			<input  ng-focus="focused()" ng-blur="blurred()"ng-show="boxVisibility" ng-model="randomInfo.one" type="text"></input>
-			<p ng-click="clickText()">{{randomInfo.two}}</p>
-			<input  ng-focus="focused()" ng-blur="blurred()"ng-show="boxVisibility" ng-model="randomInfo.two" type="text"></input>
-			<p ng-click="clickText()">{{randomInfo.three}}</p>
-			<input ng-focus="focused()" ng-blur="blurred()" ng-show="boxVisibility" ng-model="randomInfo.three" type="text"></input>
+			<div ng-repeat="thing in randomInfo">
+				<h1 ng-click="clickText($index)">{{thing}}</h1>
+				<input placeholder="Name" ng-focus="focused($index)" ng-blur="blurred($index)" ng-show="booleanIndex[$index]" ng-model="thing" type="text"></input>
+			</div>
 			<script src="script.js"></script>
 		</body>
 	</html>
